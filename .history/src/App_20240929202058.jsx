@@ -1,17 +1,16 @@
 import news_feed from './sample_news_stories.json';
-import Header from './components/Header';
-import Story from './components/Story';
+import Story from './components/story';
 
 function App() {
 
   // Get stories from news feed
   const stories = news_feed.results;
-  const storyList = stories.map(results => <Story key={results.name} results={results}/>)
+  const storyList = stories.map(story => <Story key={story.name} story={story}/>)
   
 
   return (
     <div className="App">
-      <Header/>
+      <h1>Random News Feed</h1>
       {storyList}
     </div>
   );

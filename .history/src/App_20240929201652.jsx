@@ -1,18 +1,20 @@
 import news_feed from './sample_news_stories.json';
+import Story from './components/story';
 import Header from './components/Header';
-import Story from './components/Story';
 
 function App() {
 
-  // Get stories from news feed
+  // // Get stories from news feed
   const stories = news_feed.results;
-  const storyList = stories.map(results => <Story key={results.name} results={results}/>)
-  
+  const storyCard = stories.map(story => <Story key={story.name} story={story}/>)
+
 
   return (
     <div className="App">
       <Header/>
-      {storyList}
+      <div>
+        {stories}
+      </div>
     </div>
   );
 }

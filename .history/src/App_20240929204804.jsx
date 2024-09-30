@@ -6,7 +6,7 @@ function App() {
 
   // Get stories from news feed
   const stories = news_feed.results;
-  const storyList = stories.map(results => <Story key={results.name} results={results}/>)
+  const storyList = stories.map(results => <results key={results.name} results={results}/>)
   
 
   return (
